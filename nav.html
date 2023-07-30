@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <meta itemprop="description" name="description" content="">
+    <meta itemprop="keywords" name="keywords" content="">
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/css/fancybox.css">
+    <link rel="stylesheet" href="libs/css/swiper-bundle.css">
+    <link rel="stylesheet" href="libs/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="libs/css/air-datepicker.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+    <title itemprop="headline">Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="services.html" style="display: block; margin-bottom: 20px;">
+            Услуги
+        </a>
+        <a href="services2.html" style="display: block; margin-bottom: 20px;">
+            Услуги 2
+        </a>
+        <a href="service-item.html" style="display: block; margin-bottom: 20px;">
+            Страница услуги
+        </a>
+        <a href="certificates.html" style="display: block; margin-bottom: 20px;">
+            Сертификаты
+        </a>
+        <a href="sales.html" style="display: block; margin-bottom: 20px;">
+            АКЦИИ
+        </a>
+        <a href="gym.html" style="display: block; margin-bottom: 20px;">
+            Фитнес зал
+        </a>
+        <a href="spa.html" style="display: block; margin-bottom: 20px;">
+            СПА девичники
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
+        </a>
+        <a href="orders.html" style="display: block; margin-bottom: 20px;">
+            ВЫ ХОТИТЕ ЗАКАЗАТЬ
+        </a>
+        <a href="order.html" style="display: block; margin-bottom: 20px;">
+            Оформление заказа
+        </a>
+        <a href="404.html" style="display: block; margin-bottom: 20px;">
+            404
+        </a>
+        <a href="thank.html" style="display: block; margin-bottom: 20px;">
+            Спасибо за заказ
+        </a>
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#orderModal">
+            УСПЕШНО ДОБАВЛЕНО В КОРЗИНУ
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Перезвонить мне
+        </button>
+    </div>
+
+    <div class="modal" id="orderModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.66667 6L0 10.6667L1.33333 12L6 7.33333L10.6667 12L12 10.6667L7.33333 6L12 1.33333L10.6667 0L6 4.66667L1.33333 6.35784e-07L0 1.33333L4.66667 6Z" fill="black" />
+                </svg>
+            </button>
+
+            <div class="modal__title">
+                УСПЕШНО ДОБАВЛЕНо в корзину
+            </div>
+
+            <div class="modal__nav">
+                <button class="modal__btn m-btn m-btn-primary">
+                    <span>ПРОДОЛЖИТЬ</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal login-modal" id="loginModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.66667 6L0 10.6667L1.33333 12L6 7.33333L10.6667 12L12 10.6667L7.33333 6L12 1.33333L10.6667 0L6 4.66667L1.33333 6.35784e-07L0 1.33333L4.66667 6Z" fill="black" />
+                </svg>
+            </button>
+
+            <div class="login-modal__top">
+                <div class="login-modal__title">
+                    Перезвонить мне
+                </div>
+            </div>
+            <form class="modal-form">
+                <fieldset class="fg">
+                    <span class="fg__icon">
+                    <img src="img/user.svg" alt="">
+                </span>
+                    <input type="text" placeholder="Ваше имя">
+                    <div class="invalid-feedback">Errror</div>
+                </fieldset>
+                <fieldset class="fg">
+                    <span class="fg__icon">
+                    <img src="img/phone2.svg" alt="">
+                </span>
+                    <input type="tel" placeholder="Телефон">
+                </fieldset>
+                <button class="modal-form__btn m-btn m-btn-primary">
+                    <span>Отправить</span>
+                </button>
+            </form>
+            <div class="login-modal__hint">
+                Согласие с политикой обработки <br>
+            персональных данных
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="modal-backdrop show"></div>-->
+
+    <!--  -->
+    <script src="libs/js/jquery.com_jquery-3.6.4.min.js"></script>
+    <script src="libs/js/bootstrap.min.js"></script>
+    <script src="libs/js/fancybox.umd.js"></script>
+    <script src="libs/js/jquery.maskedinput.min.js"></script>
+    <script src="libs/js/swiper-bundle.js"></script>
+    <script src="libs/js/jquery.timepicker.min.js"></script>
+    <script src="libs/js/air-datepicker.js"></script>
+    <script src="libs/js/ru.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
